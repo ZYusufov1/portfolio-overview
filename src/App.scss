@@ -1,0 +1,118 @@
+@import "@/styles/variables";
+
+#root {
+  width: 100vw;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.portfolio {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+
+  &__button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &--add {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    &--add:hover {
+      background-color: #45a049;
+    }
+  }
+
+  &__table {
+    display: block;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+
+    &--header{
+      display: flex;
+      background: #f4f4f4;
+      font-weight: bold;
+      padding: 10px;
+      border-bottom: 2px solid #ddd;
+
+      span {
+        flex: 1;
+        color: #242424;
+        text-align: center;
+      }
+    }
+
+    &--row {
+      display: flex;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #f0f0f0;
+
+        span {
+          color: #242424;
+        }
+      }
+
+      span {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__change {
+    font-weight: bold;
+  }
+
+  &__empty {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #888;
+  }
+}
+
+
+
+.green {
+  color: #4caf50;
+}
+
+.red {
+  color: #f04;
+}
+
+@include mobile-viewport {
+  .portfolio {
+
+    &__table {
+
+      &--header{
+
+        span {
+          font-size: 10px;
+        }
+      }
+
+      &--row {
+
+        span {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

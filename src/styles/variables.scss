@@ -1,0 +1,5 @@
+@mixin  mobile-viewport {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
